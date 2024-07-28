@@ -1,13 +1,10 @@
-
 import './App.css'
+import IndexPage from './pages/IndexPage'
 
-function App() {
-  
+function App() {  
   return (
     <>
-      <div>
-        <p className='border border-red-500'>cool</p>
-      </div>
+      <IndexPage/>
     </>
   )
 }
