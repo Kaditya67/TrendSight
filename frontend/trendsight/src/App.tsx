@@ -6,9 +6,8 @@ function App() {
   return (
     <>
       <div>
-        <p>cool</p>
+        <p className='border border-red-500'>cool</p>
       </div>
-       
     </>
   )
 }
