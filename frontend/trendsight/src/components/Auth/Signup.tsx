@@ -4,9 +4,9 @@ import React from 'react';
 
 const Signup: React.FC = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-green-400 to-blue-500">
-      <div className="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow-lg">
-        <h2 className="text-3xl font-bold text-center text-gray-900">Create a New Account</h2>
+    <div className="flex items-center justify-center mt-12">
+      <div className="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow-lg my-auto">
+        <h2 className="text-3xl font-bold text-center text-gray-900">Sign Up Your Account</h2>
         <form className="space-y-6">
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
