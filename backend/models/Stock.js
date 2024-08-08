@@ -10,15 +10,17 @@ const historicalDataSchema = new mongoose.Schema({
   volume: { type: Number, required: true },
 });
 
-const stockSchema = new mongoose.Schema({
-  symbol: { type: String, required: true, unique: true },
-  name: { type: String, required: true },
-  sector: { type: String },
-  industry: { type: String },
-  marketCap: { type: Number },
-  historicalPrices: [historicalDataSchema],
+const StockSchema = new mongoose.Schema({
+    symbol: { type: String, required: true },
+    name: { type: String, required: true },
+    historicalPrices: [{
+        date: { type: String, required: true },
+        open: { type: Number, required: true },
+        high: { type: Number, required: true },
+        low: { type: Number, required: true },
+        close: { type: Number, required: true },
+        volume: { type: Number, required: true }
+    }]
 });
 
-const Stock = mongoose.model('Stock', stockSchema);
-
-module.exports = Stock;
+module.exports = mongoose.model('Stock', StockSchema);

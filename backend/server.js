@@ -1,4 +1,7 @@
 // server.js
+// At the top of your main file (e.g., index.js or server.js)
+require('dotenv').config();
+
 const express = require('express');
 const connectDB = require('./config/db');
 const stockRoutes = require('./routes/stockRoutes');
@@ -13,6 +16,12 @@ app.use(express.json());
 
 // Routes
 app.use('/api', stockRoutes);
+
+// server.js or app.js
+// const testRoutes = require('./routes/test');
+
+// app.use('/api', testRoutes);
+
 
 // Start the server
 const PORT = process.env.PORT || 5000;
